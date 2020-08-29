@@ -22,11 +22,7 @@
                     <fieldset>
                         <legend><h1>Install</h1></legend>
 
-                        {{ if .Error }}
-                            <div class="alert alert-danger" role="alert">
-                                {{ .Error }}
-                            </div>
-                        {{ end }}
+                        {{ template "default.errorhandler" . }}
 
                         <label class="form-label" for="dbhost">Database host</label>
                         <input class="form-input" name="dbhost" id="dbhost" type="text" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbhost }}{{ end }}">
