@@ -25,26 +25,36 @@
                         {{ template "default.errorhandler" . }}
 
                         <label class="form-label" for="dbhost">Database host</label>
-                        <input class="form-input" name="dbhost" id="dbhost" type="text" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbhost }}{{ end }}">
+                        <input class="form-input" name="dbhost" id="dbhost" type="text"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbhost }}{{ end }}">
 
                         <label class="form-label" for="dbname">Database name</label>
-                        <input class="form-input" name="dbname" id="dbname" type="text" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbname }}{{ end }}">
+                        <input class="form-input" name="dbname" id="dbname" type="text"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbname }}{{ end }}">
 
                         <label class="form-label" for="dbuser">Database user</label>
-                        <input class="form-input" name="dbuser" id="dbuser" type="text" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbuser }}{{ end }}">
+                        <input class="form-input" name="dbuser" id="dbuser" type="text"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbuser }}{{ end }}">
 
                         <label class="form-label" for="dbpassword">Database password</label>
-                        <input class="form-input" name="dbpassword" id="dbpassword" type="password" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbpassword }}{{ end }}">
+                        <input class="form-input" name="dbpassword" id="dbpassword" type="password"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbpassword }}{{ end }}">
+
+                        <label class="form-label" for="dbdriver">Database driver</label>
+                        <input class="form-input" name="dbdriver" id="dbdriver" type="text"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbdriver }}{{ end }}">
 
                     </fieldset>
                     <fieldset>
                         <legend>Admin user</legend>
 
                         <label class="form-label" for="email">Email/Username/Phone</label>
-                        <input class="form-input" name="username" id="username" type="text" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.username }}{{ end }}">
+                        <input class="form-input" name="username" id="username" type="text"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.username }}{{ end }}">
 
                         <label class="form-label" for="password">Password</label>
-                        <input class="form-input" name="password" id="password" type="password" value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.password }}{{ end }}">
+                        <input class="form-input" name="password" id="password" type="password"
+                               value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.password }}{{ end }}">
 
                     </fieldset>
                     <input type="submit" class="btn btn-primary" value="Install">
