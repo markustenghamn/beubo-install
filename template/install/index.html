@@ -24,6 +24,8 @@
 
                         {{ template "default.errorhandler" . }}
 
+                        <p>The database driver can be any driver supported by <a href="https://gorm.io/" target="_blank">GORM V2</a>. Currently `sqlite3` is the recommended driver for local development and `mysql` is recommended for production. When using `sqlite3` the database name will be the filename of the database.</p>
+
                         <label class="form-label" for="dbhost">Database host</label>
                         <input class="form-input" name="dbhost" id="dbhost" type="text"
                                value="{{if and (.Extra) (.Extra.form) }}{{ .Extra.form.dbhost }}{{ end }}">
